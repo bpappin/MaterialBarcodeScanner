@@ -1,5 +1,6 @@
 ### Project Origins
-_This project originated at https://github.com/EdwardvanRaak/MaterialBarcodeScanner, however, after the code had not been touched in 3 years, it became nessisary to fork the repository, and make some needed improvments._
+_This project originated at https://github.com/EdwardvanRaak/MaterialBarcodeScanner, however, after the code had not been touched in 3 years, it became nessisary to fork the repository, and make some needed improvments.
+Once I get it building again, the namespace will be changed, to avoid collisions with the original._
 
 # MaterialBarcodeScanner
 Easy to use barcode reader for your Android Project (Uses Google Mobile Vision API)
