@@ -106,9 +106,6 @@ If you want to scan for a very specific combination of barcodes you can setup th
 
 # Developed By
 
-* Originally by Edward van Raak
- * edwardvraak@gmail.com
- * [Donate with Paypal](https://www.paypal.me/EdwardvanRaak)
-* Forked by Brill Pappin
- * brill@pappin.ca
+* Originally by Edward van Raak (edwardvraak@gmail.com)
+* Forked by Brill Pappin (brill@pappin.ca)
 
