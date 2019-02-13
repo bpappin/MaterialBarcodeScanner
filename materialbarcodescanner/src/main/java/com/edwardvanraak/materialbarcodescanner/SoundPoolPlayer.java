@@ -4,6 +4,9 @@ import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
 
+
+import com.github.edwardvanraak.materialbarcodescanner.R;
+
 import java.util.HashMap;
 
 public class SoundPoolPlayer {

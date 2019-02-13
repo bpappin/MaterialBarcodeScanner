@@ -9,6 +9,7 @@ import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.github.edwardvanraak.materialbarcodescanner.R;
 import com.google.android.gms.vision.barcode.Barcode;
 
 import org.greenrobot.eventbus.EventBus;

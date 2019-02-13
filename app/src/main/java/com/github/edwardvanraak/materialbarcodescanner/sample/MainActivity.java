@@ -1,4 +1,4 @@
-package com.edwardvanraak.materialbarcodescannerexample;
+package com.github.edwardvanraak.materialbarcodescanner.sample;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -9,14 +9,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.edwardvanraak.materialbarcodescanner.MaterialBarcodeScanner;
 import com.edwardvanraak.materialbarcodescanner.MaterialBarcodeScannerBuilder;
 import com.google.android.gms.vision.barcode.Barcode;
 
-import static junit.framework.Assert.assertNotNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,21 +32,27 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         result = (TextView) findViewById(R.id.barcodeResult);
         final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        assertNotNull(result);
-        assertNotNull(fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               startScan();
-            }
-        });
-        if(savedInstanceState != null){
-            Barcode restoredBarcode = savedInstanceState.getParcelable(BARCODE_KEY);
-            if(restoredBarcode != null){
-                result.setText(restoredBarcode.rawValue);
-                barcodeResult = restoredBarcode;
+        if(fab != null) {
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startScan();
+                }
+            });
+            if (savedInstanceState != null) {
+                Barcode restoredBarcode = savedInstanceState.getParcelable(BARCODE_KEY);
+                if (restoredBarcode != null) {
+                    result.setText(restoredBarcode.rawValue);
+                    barcodeResult = restoredBarcode;
+                }
             }
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        outState.putParcelable(BARCODE_KEY, barcodeResult);
+        super.onSaveInstanceState(outState);
     }
 
     private void startScan() {
@@ -74,12 +78,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        outState.putParcelable(BARCODE_KEY, barcodeResult);
-        super.onSaveInstanceState(outState);
-    }
-
-    @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode != MaterialBarcodeScanner.RC_HANDLE_CAMERA_PERM) {
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -96,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
         };
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Error")
-                .setMessage(R.string.no_camera_permission)
-                .setPositiveButton(android.R.string.ok, listener)
-                .show();
+               .setMessage(R.string.no_camera_permission)
+               .setPositiveButton(android.R.string.ok, listener)
+               .show();
     }
 }
