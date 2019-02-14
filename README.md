@@ -29,14 +29,14 @@ Add to your repository list:
 ``` gradle
 repositories {
     maven {
-        url  "https://dl.bintray.com/bpappin/pappin" 
+        url  "https://dl.bintray.com/bpappin/pappin"
     }
 }
 ```
 
 Add the library to your dependencies:
 ```gradle
-implementation 'com.github.pappin.mbs:mbs-lib:1.0.0'
+implementation 'com.github.pappin.mbs:mbs-lib:1.0.1'
 ```
 
 ## 2. Build a MaterialBarcodeScanner
@@ -64,9 +64,9 @@ implementation 'com.github.pappin.mbs:mbs-lib:1.0.0'
     }
 
  ```
- 
+
  Hook it up to a button
- 
+
 ```java
   fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +75,7 @@ implementation 'com.github.pappin.mbs:mbs-lib:1.0.0'
             }
         });
  ```
- 
+
 ## 3. Start scanning!
 
 Check out the full [example project](https://github.com/EdwardvanRaak/MaterialBarcodeScanner/blob/master/app/src/main/java/com/edwardvanraak/materialbarcodescannerexample/MainActivity.java) for code required for camera permissions on Android 6.0 Marshmallow
@@ -84,7 +84,7 @@ Check out the full [example project](https://github.com/EdwardvanRaak/MaterialBa
 
 ## Center tracking mode
 
-By default a barcode is tracked/highlighted at the location at which it was found.  
+By default a barcode is tracked/highlighted at the location at which it was found.
 With <i>center tracking mode</i> a square image will be shown during scanning that will turn green when a barcode is found.
 Please note that you can still scan a barcode outside the center tracker! This is purely a visual change.
 
@@ -108,9 +108,9 @@ In some situations you might want to scan for only a certain type of barcode lik
 .withOnly2DScanning()
 ```
 
-If you want to scan for a very specific combination of barcodes you can setup the builder like this:		
-```java		
-.withBarcodeFormats(Barcode.AZTEC | Barcode.EAN_13 | Barcode.CODE_93)		
+If you want to scan for a very specific combination of barcodes you can setup the builder like this:
+```java
+.withBarcodeFormats(Barcode.AZTEC | Barcode.EAN_13 | Barcode.CODE_93)
 ```
 
 ## Screenshots
