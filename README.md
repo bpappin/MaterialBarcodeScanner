@@ -5,10 +5,7 @@ Once I get it building again, the namespace will be changed, to avoid collisions
 # MaterialBarcodeScanner
 Easy to use barcode reader for your Android Project (Uses Google Mobile Vision API)
 
-[ ![Download](https://api.bintray.com/packages/edwardvraak/maven/MaterialBarcodeScanner/images/download.svg) ](https://bintray.com/edwardvraak/maven/MaterialBarcodeScanner/_latestVersion)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MaterialBarcodeScanner-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3439)
-
-
+[ ![Download](https://api.bintray.com/packages/bpappin/pappin/material-barcode-scanner/images/download.svg) ](https://bintray.com/bpappin/pappin/material-barcode-scanner/_latestVersion)
 
 **In active development so if you have a suggestion or feature request please feel free to open an issue!**
 
@@ -24,8 +21,22 @@ Easy to use barcode reader for your Android Project (Uses Google Mobile Vision A
 # Setup
 ## 1. Provide gradle dependency
 
+The library is hosted on Bintray at:
+https://bintray.com/bpappin/pappin/material-barcode-scanner
+
+
+Add to your repository list:
+``` gradle
+repositories {
+    maven {
+        url  "https://dl.bintray.com/bpappin/pappin" 
+    }
+}
+```
+
+Add the library to your dependencies:
 ```gradle
-compile 'com.edwardvanraak:MaterialBarcodeScanner:0.0.6-ALPHA'
+implementation 'com.github.pappin.mbs:mbs-lib:1.0.0'
 ```
 
 ## 2. Build a MaterialBarcodeScanner
