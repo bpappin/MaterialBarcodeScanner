@@ -1,29 +1,59 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
 buildscript {
     repositories {
+        google()
         jcenter()
-        mavenCentral()
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0'
-        classpath 'com.novoda:bintray-release:0.3.4'
+        classpath 'com.android.tools.build:gradle:3.3.0'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.1'
     }
 }
 
 allprojects {
     repositories {
+        google()
         jcenter()
-        mavenCentral()
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+
+    }
+
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+        failOnError false
     }
 }
 
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
 ext {
-    compileSdkVersion = 23
-    buildToolsVersion = "23.0.3"
-    supportLibVersion = "23.3.0"
-}
+    bintrayRepo = 'pappin'
+    bintrayName = 'material-barcode-scanner'
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.12'
-}
+    publishedGroupId = 'com.github.pappin.mbs'
+//    libraryName = 'Rufous Widgets'
+//    artifact = 'rufous-widgets'
+//    libraryDescription = 'Rufous Project: Widgets'
 
+    siteUrl = 'https://github.com/bpappin/material-barcode-scanner'
+    gitUrl = 'https://github.com/bpappin/material-barcode-scanner.git'
+
+    libraryVersion = '1.0.1'
+    libraryCode = 2
+
+    developerId = 'bpappin'
+    developerName = 'Brill pappin'
+    developerEmail = 'brill@pappin.ca'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}

@@ -1,1 +1,1 @@
-include ':app', ':materialbarcodescanner'
+include ':mbs-app', ':mbs-lib'

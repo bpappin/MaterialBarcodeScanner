@@ -5,10 +5,7 @@ Once I get it building again, the namespace will be changed, to avoid collisions
 # MaterialBarcodeScanner
 Easy to use barcode reader for your Android Project (Uses Google Mobile Vision API)
 
-[ ![Download](https://api.bintray.com/packages/edwardvraak/maven/MaterialBarcodeScanner/images/download.svg) ](https://bintray.com/edwardvraak/maven/MaterialBarcodeScanner/_latestVersion)
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MaterialBarcodeScanner-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/3439)
-
-
+[ ![Download](https://api.bintray.com/packages/bpappin/pappin/material-barcode-scanner/images/download.svg) ](https://bintray.com/bpappin/pappin/material-barcode-scanner/_latestVersion)
 
 **In active development so if you have a suggestion or feature request please feel free to open an issue!**
 
@@ -24,8 +21,22 @@ Easy to use barcode reader for your Android Project (Uses Google Mobile Vision A
 # Setup
 ## 1. Provide gradle dependency
 
+The library is hosted on Bintray at:
+https://bintray.com/bpappin/pappin/material-barcode-scanner
+
+
+Add to your repository list:
+``` gradle
+repositories {
+    maven {
+        url  "https://dl.bintray.com/bpappin/pappin"
+    }
+}
+```
+
+Add the library to your dependencies:
 ```gradle
-compile 'com.edwardvanraak:MaterialBarcodeScanner:0.0.6-ALPHA'
+implementation 'com.github.pappin.mbs:mbs-lib:1.0.1'
 ```
 
 ## 2. Build a MaterialBarcodeScanner
@@ -53,9 +64,9 @@ compile 'com.edwardvanraak:MaterialBarcodeScanner:0.0.6-ALPHA'
     }
 
  ```
- 
+
  Hook it up to a button
- 
+
 ```java
   fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +75,7 @@ compile 'com.edwardvanraak:MaterialBarcodeScanner:0.0.6-ALPHA'
             }
         });
  ```
- 
+
 ## 3. Start scanning!
 
 Check out the full [example project](https://github.com/EdwardvanRaak/MaterialBarcodeScanner/blob/master/app/src/main/java/com/edwardvanraak/materialbarcodescannerexample/MainActivity.java) for code required for camera permissions on Android 6.0 Marshmallow
@@ -73,7 +84,7 @@ Check out the full [example project](https://github.com/EdwardvanRaak/MaterialBa
 
 ## Center tracking mode
 
-By default a barcode is tracked/highlighted at the location at which it was found.  
+By default a barcode is tracked/highlighted at the location at which it was found.
 With <i>center tracking mode</i> a square image will be shown during scanning that will turn green when a barcode is found.
 Please note that you can still scan a barcode outside the center tracker! This is purely a visual change.
 
@@ -97,9 +108,9 @@ In some situations you might want to scan for only a certain type of barcode lik
 .withOnly2DScanning()
 ```
 
-If you want to scan for a very specific combination of barcodes you can setup the builder like this:		
-```java		
-.withBarcodeFormats(Barcode.AZTEC | Barcode.EAN_13 | Barcode.CODE_93)		
+If you want to scan for a very specific combination of barcodes you can setup the builder like this:
+```java
+.withBarcodeFormats(Barcode.AZTEC | Barcode.EAN_13 | Barcode.CODE_93)
 ```
 
 ## Screenshots
