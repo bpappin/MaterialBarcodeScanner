@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.edwardvanraak.materialbarcodescanner;
+package com.github.pappin.mbs;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;

@@ -7,17 +7,17 @@
     android:keepScreenOn="true"
     android:orientation="horizontal">
 
-    <com.edwardvanraak.materialbarcodescanner.CameraSourcePreview
+    <com.github.pappin.mbs.CameraSourcePreview
         android:id="@+id/preview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.edwardvanraak.materialbarcodescanner.GraphicOverlay
+        <com.github.pappin.mbs.GraphicOverlay
             android:id="@+id/graphicOverlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-    </com.edwardvanraak.materialbarcodescanner.CameraSourcePreview>
+    </com.github.pappin.mbs.CameraSourcePreview>
 
     <RelativeLayout
         android:visibility="gone"

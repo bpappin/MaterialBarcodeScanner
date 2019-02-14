@@ -1,4 +1,4 @@
-package com.edwardvanraak.materialbarcodescanner;
+package com.github.pappin.mbs;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -6,7 +6,6 @@ import android.hardware.Camera;
 import android.support.annotation.NonNull;
 import android.view.ViewGroup;
 
-import com.github.edwardvanraak.materialbarcodescanner.R;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
@@ -43,7 +42,7 @@ public class MaterialBarcodeScannerBuilder {
      * @param activity current activity which will contain the drawer
      */
     public MaterialBarcodeScannerBuilder(@NonNull Activity activity) {
-        this.mRootView = (ViewGroup) activity.findViewById(android.R.id.content);
+        this.mRootView = (ViewGroup)activity.findViewById(android.R.id.content);
         this.mActivity = activity;
     }
 
@@ -63,7 +62,7 @@ public class MaterialBarcodeScannerBuilder {
      * @param activity current activity which will contain the MaterialBarcodeScanner
      */
     public MaterialBarcodeScannerBuilder withActivity(@NonNull Activity activity) {
-        this.mRootView = (ViewGroup) activity.findViewById(android.R.id.content);
+        this.mRootView = (ViewGroup)activity.findViewById(android.R.id.content);
         this.mActivity = activity;
         return this;
     }
@@ -103,7 +102,8 @@ public class MaterialBarcodeScannerBuilder {
     }
 
     /**
-     * Sets the tracker color used by the barcode scanner, By default this is Material Red 500 (#F44336).
+     * Sets the tracker color used by the barcode scanner, By default this is Material Red 500
+     * (#F44336).
      *
      * @param color
      */
@@ -137,7 +137,8 @@ public class MaterialBarcodeScannerBuilder {
     }
 
     /**
-     * Bit mask (containing values like QR_CODE and so on) that selects which formats this barcode detector should recognize.
+     * Bit mask (containing values like QR_CODE and so on) that selects which formats this barcode
+     * detector should recognize.
      *
      * @param barcodeFormats
      * @return
@@ -148,7 +149,8 @@ public class MaterialBarcodeScannerBuilder {
     }
 
     /**
-     * Enables exclusive scanning on EAN-13, EAN-8, UPC-A, UPC-E, Code-39, Code-93, Code-128, ITF and Codabar barcodes.
+     * Enables exclusive scanning on EAN-13, EAN-8, UPC-A, UPC-E, Code-39, Code-93, Code-128, ITF
+     * and Codabar barcodes.
      *
      * @return
      */
@@ -178,8 +180,9 @@ public class MaterialBarcodeScannerBuilder {
     }
 
     /**
-     * Enables the default center tracker. This tracker is always visible and turns green when a barcode is found.\n
-     * Please note that you can still scan a barcode outside the center tracker! This is purely a visual change.
+     * Enables the default center tracker. This tracker is always visible and turns green when a
+     * barcode is found.\n Please note that you can still scan a barcode outside the center tracker!
+     * This is purely a visual change.
      *
      * @return
      */
@@ -190,7 +193,8 @@ public class MaterialBarcodeScannerBuilder {
 
     /**
      * Enables the center tracker with a custom drawable resource. This tracker is always visible.\n
-     * Please note that you can still scan a barcode outside the center tracker! This is purely a visual change.
+     * Please note that you can still scan a barcode outside the center tracker! This is purely a
+     * visual change.
      *
      * @param trackerResourceId         a drawable resource id
      * @param detectedTrackerResourceId a drawable resource id for the detected tracker state

@@ -1,4 +1,4 @@
-package com.github.edwardvanraak.materialbarcodescanner.sample;
+package com.github.pappin.mbs.sample;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -11,8 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-import com.edwardvanraak.materialbarcodescanner.MaterialBarcodeScanner;
-import com.edwardvanraak.materialbarcodescanner.MaterialBarcodeScannerBuilder;
+import com.github.pappin.mbs.MaterialBarcodeScanner;
+import com.github.pappin.mbs.MaterialBarcodeScannerBuilder;
 import com.google.android.gms.vision.barcode.Barcode;
 
 
@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        result = (TextView) findViewById(R.id.barcodeResult);
-        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        if(fab != null) {
+        result = (TextView)findViewById(R.id.barcodeResult);
+        final FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab);
+        if (fab != null) {
             fab.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

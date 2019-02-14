@@ -1,4 +1,4 @@
-package com.edwardvanraak.materialbarcodescanner;
+package com.github.pappin.mbs;
 
 import android.Manifest;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.support.v4.app.ActivityCompat;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.github.edwardvanraak.materialbarcodescanner.R;
+import com.github.pappin.mbs.R;
 import com.google.android.gms.vision.barcode.Barcode;
 
 import org.greenrobot.eventbus.EventBus;

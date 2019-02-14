@@ -1,4 +1,4 @@
-package com.github.edwardvanraak.materialbarcodescanner;
+package com.github.pappin.mbs;
 
 import org.junit.Test;
 

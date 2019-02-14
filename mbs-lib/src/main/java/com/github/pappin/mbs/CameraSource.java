@@ -1,4 +1,4 @@
-package com.edwardvanraak.materialbarcodescanner;
+package com.github.pappin.mbs;
 
 import android.Manifest;
 import android.annotation.SuppressLint;

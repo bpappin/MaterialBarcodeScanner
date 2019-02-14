@@ -1,11 +1,11 @@
-package com.edwardvanraak.materialbarcodescanner;
+package com.github.pappin.mbs;
 
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
 
 
-import com.github.edwardvanraak.materialbarcodescanner.R;
+import com.github.pappin.mbs.R;
 
 import java.util.HashMap;
 
